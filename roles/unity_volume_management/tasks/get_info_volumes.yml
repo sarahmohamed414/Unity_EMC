@@ -1,21 +1,36 @@
 - name: Get information of all volumes on Unity array
   dellemc.unity.info:
-    unispherehost: "{{unispherehost}}"
-    username: "{{username}}"
-    password: "{{password}}"
-    validate_certs: "{{validate_certs}}"
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
     gather_subset:
       - vol
   register: all_volumes  # Register the result for all volumes
-- name: Debug all volumes information
+
+- name: Initialize an empty list
+  set_fact:
+    volume_ids: []
+
+- name: Append each volume's id to the list
+  set_fact:
+    volume_ids: "{{ volume_ids + [item.id] }}"
+  loop: "{{ all_volumes.Volumes }}"
+  no_log: true
+- name: Display the collected volume IDs
   debug:
-    var: all_volumes  # Display the entire registered data to understand its structure
+    var: volume_ids
+- name: Initialize an empty list for volume names
+  set_fact:
+    volume_names: []
 
+- name: Append each volume's name to the list
+  set_fact:
+    volume_names: "{{ volume_names + [item.name] }}"
+  loop: "{{ all_volumes.Volumes }}"
+  no_log: true
 
-#- name: Filter specific volume information
-  #set_fact:
-    #specific_volume: "{{ all_volumes.volumes | json_query('[?name==`' + vol_name + '`]') }}"
+- name: Display the collected volume names
+  debug:
+    var: volume_names
 
-#- name: Debug specific volume information
-  #debug:
-   # var: specific_volume  # Display the filtered volume information

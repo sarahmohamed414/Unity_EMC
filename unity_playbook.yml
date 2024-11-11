@@ -7,6 +7,14 @@
     ansible_python_interpreter: /ansible/unity_venv/bin/python3
 
   vars_prompt:
+    - name: user_input
+      prompt: |
+        Please select an action:
+        1. Get list of volume names and ids
+        2. Create a volume
+        3. Rename a volume
+        4. Delete a volume
+      private: false
     - name: "vol_name"
       prompt: "Enter the volume name that you want to create"
       private: no
@@ -23,11 +31,12 @@
       prompt: "Enter the SMB share that you want to create"
       private: no
     - name: "Get_info_SMB"
-      prompt: "Enter the SMB share that you want to get informtion about"
+      prompt: "Enter the SMB share that you want to get information about"
       private: no
     - name: "Get_info_SMB_Nas"
       prompt: "Enter the Nas server that the share resides on"
       private: no
+
   tasks:
     - name: Include unity_configuration role
       ansible.builtin.include_role:

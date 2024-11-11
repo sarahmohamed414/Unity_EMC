@@ -113,3 +113,81 @@
 2024-11-11 14:47:48,822 volume.py INFO : Successfully got the volume object {"UnityLun": {"current_node": "NodeEnum.SPB", "data_reduction_percent": 0, "data_reduction_ratio": 1.0, "data_reduction_size_saved": 0, "default_node": "NodeEnum.SPB", "existed": true, "family_base_lun": {"UnityLun": {"hash": 8791738747421, "id": "sv_92"}}, "family_clone_count": 0, "hash": 8791738893417, "health": {"UnityHealth": {"hash": 8791738138413}}, "id": "sv_92", "is_advanced_dedup_enabled": true, "is_data_reduction_enabled": true, "is_replication_destination": false, "is_snap_schedule_paused": false, "is_thin_clone": false, "is_thin_enabled": true, "metadata_size": 3758096384, "metadata_size_allocated": 3221225472, "name": "aly", "per_tier_size_used": [3489660928, 0, 0], "pool": {"UnityPool": {"hash": 8791738762269}}, "size_allocated": 0, "size_total": 2147483648, "snap_count": 0, "snap_wwn": "60:06:01:60:4A:50:4E:00:10:91:65:BB:0B:FD:4C:BE", "snaps_size": 0, "snaps_size_allocated": 0, "storage_resource": {"UnityStorageResource": {"hash": 8791738554777}}, "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH", "type": "LUNTypeEnum.STANDALONE", "wwn": "60:06:01:60:4A:50:4E:00:1F:F1:31:67:6A:39:EE:95"}} 
 2024-11-11 14:47:49,366 volume.py INFO : Successfully got the volume object {"UnityLun": {"current_node": "NodeEnum.SPB", "data_reduction_percent": 0, "data_reduction_ratio": 1.0, "data_reduction_size_saved": 0, "default_node": "NodeEnum.SPB", "existed": true, "family_base_lun": {"UnityLun": {"hash": 8791738759145, "id": "sv_92"}}, "family_clone_count": 0, "hash": 8791737470145, "health": {"UnityHealth": {"hash": 8791737470661}}, "id": "sv_92", "is_advanced_dedup_enabled": true, "is_data_reduction_enabled": true, "is_replication_destination": false, "is_snap_schedule_paused": false, "is_thin_clone": false, "is_thin_enabled": true, "metadata_size": 3758096384, "metadata_size_allocated": 3221225472, "name": "aly", "per_tier_size_used": [3489660928, 0, 0], "pool": {"UnityPool": {"hash": 8791737470745}}, "size_allocated": 0, "size_total": 2147483648, "snap_count": 0, "snap_wwn": "60:06:01:60:4A:50:4E:00:10:91:65:BB:0B:FD:4C:BE", "snaps_size": 0, "snaps_size_allocated": 0, "storage_resource": {"UnityStorageResource": {"hash": 8791737470109}}, "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH", "type": "LUNTypeEnum.STANDALONE", "wwn": "60:06:01:60:4A:50:4E:00:1F:F1:31:67:6A:39:EE:95"}} 
 2024-11-11 14:48:13,180 volume.py INFO : Successfully got the volume object {"UnityLun": {"current_node": "NodeEnum.SPB", "data_reduction_percent": 0, "data_reduction_ratio": 1.0, "data_reduction_size_saved": 0, "default_node": "NodeEnum.SPB", "existed": true, "family_base_lun": {"UnityLun": {"hash": 8737976642577, "id": "sv_88"}}, "family_clone_count": 0, "hash": 8737975304141, "health": {"UnityHealth": {"hash": 8737976508301}}, "id": "sv_88", "is_advanced_dedup_enabled": true, "is_data_reduction_enabled": true, "is_replication_destination": false, "is_snap_schedule_paused": false, "is_thin_clone": false, "is_thin_enabled": true, "metadata_size": 3758096384, "metadata_size_allocated": 3221225472, "name": "sarah_y1", "per_tier_size_used": [3489660928, 0, 0], "pool": {"UnityPool": {"hash": 8737976489789}}, "size_allocated": 0, "size_total": 2147483648, "snap_count": 0, "snap_wwn": "60:06:01:60:4A:50:4E:00:5C:64:92:DB:2E:7F:49:96", "snaps_size": 0, "snaps_size_allocated": 0, "storage_resource": {"UnityStorageResource": {"hash": 8737976703985}}, "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH", "type": "LUNTypeEnum.STANDALONE", "wwn": "60:06:01:60:4A:50:4E:00:4A:EE:31:67:EA:8F:9D:E9"}} 
+2024-11-11 15:17:50,365 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 15:17:50,365 info.py INFO : Getting array details 
+2024-11-11 15:17:53,151 info.py INFO : Getting volumes list 
+2024-11-11 15:17:55,219 info.py INFO : Successfully listed.
+2024-11-11 15:18:50,042 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 15:18:50,042 info.py INFO : Getting array details 
+2024-11-11 15:18:52,798 info.py INFO : Getting volumes list 
+2024-11-11 15:18:54,867 info.py INFO : Successfully listed.
+2024-11-11 15:24:58,491 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 15:24:58,491 info.py INFO : Getting array details 
+2024-11-11 15:25:01,271 info.py INFO : Getting volumes list 
+2024-11-11 15:25:03,234 info.py INFO : Successfully listed.
+2024-11-11 15:27:03,960 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 15:27:03,960 info.py INFO : Getting array details 
+2024-11-11 15:27:06,741 info.py INFO : Getting volumes list 
+2024-11-11 15:27:08,646 info.py INFO : Successfully listed.
+2024-11-11 15:27:58,015 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 15:27:58,016 info.py INFO : Getting array details 
+2024-11-11 15:28:00,989 info.py INFO : Getting volumes list 
+2024-11-11 15:28:03,276 info.py INFO : Successfully listed.
+2024-11-11 15:29:41,025 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 15:29:41,025 info.py INFO : Getting array details 
+2024-11-11 15:29:43,791 info.py INFO : Getting volumes list 
+2024-11-11 15:29:45,743 info.py INFO : Successfully listed.
+2024-11-11 15:30:37,254 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 15:30:37,254 info.py INFO : Getting array details 
+2024-11-11 15:30:39,974 info.py INFO : Getting volumes list 
+2024-11-11 15:30:41,875 info.py INFO : Successfully listed.
+2024-11-11 15:32:05,189 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 15:32:05,189 info.py INFO : Getting array details 
+2024-11-11 15:32:07,979 info.py INFO : Getting volumes list 
+2024-11-11 15:32:09,907 info.py INFO : Successfully listed.
+2024-11-11 15:36:21,659 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 15:36:21,659 info.py INFO : Getting array details 
+2024-11-11 15:36:24,520 info.py INFO : Getting volumes list 
+2024-11-11 15:36:27,940 info.py INFO : Successfully listed.
+2024-11-11 16:04:08,422 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:04:08,423 info.py INFO : Getting array details 
+2024-11-11 16:04:11,276 info.py INFO : Getting volumes list 
+2024-11-11 16:04:13,416 info.py INFO : Successfully listed.
+2024-11-11 16:05:06,687 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:05:06,687 info.py INFO : Getting array details 
+2024-11-11 16:05:09,897 info.py INFO : Getting volumes list 
+2024-11-11 16:05:11,819 info.py INFO : Successfully listed.
+2024-11-11 16:07:59,090 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:07:59,090 info.py INFO : Getting array details 
+2024-11-11 16:08:02,588 info.py INFO : Getting volumes list 
+2024-11-11 16:08:04,519 info.py INFO : Successfully listed.
+2024-11-11 16:11:29,700 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:11:29,700 info.py INFO : Getting array details 
+2024-11-11 16:11:32,443 info.py INFO : Getting volumes list 
+2024-11-11 16:11:34,460 info.py INFO : Successfully listed.
+2024-11-11 16:14:17,979 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:14:17,979 info.py INFO : Getting array details 
+2024-11-11 16:14:20,848 info.py INFO : Getting volumes list 
+2024-11-11 16:14:23,357 info.py INFO : Successfully listed.
+2024-11-11 16:14:48,346 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:14:48,346 info.py INFO : Getting array details 
+2024-11-11 16:14:51,170 info.py INFO : Getting volumes list 
+2024-11-11 16:14:53,091 info.py INFO : Successfully listed.
+2024-11-11 16:16:30,211 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:16:30,211 info.py INFO : Getting array details 
+2024-11-11 16:16:33,171 info.py INFO : Getting volumes list 
+2024-11-11 16:16:35,128 info.py INFO : Successfully listed.
+2024-11-11 16:22:37,867 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:22:37,867 info.py INFO : Getting array details 
+2024-11-11 16:22:40,637 info.py INFO : Getting volumes list 
+2024-11-11 16:22:42,646 info.py INFO : Successfully listed.
+2024-11-11 16:44:16,167 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:44:16,167 info.py INFO : Getting array details 
+2024-11-11 16:44:19,103 info.py INFO : Getting volumes list 
+2024-11-11 16:44:21,292 info.py INFO : Successfully listed.
+2024-11-11 16:45:04,278 volume.py INFO : Successfully got the volume object {"UnityLun": {"current_node": "NodeEnum.SPB", "data_reduction_percent": 0, "data_reduction_ratio": 1.0, "data_reduction_size_saved": 0, "default_node": "NodeEnum.SPB", "existed": true, "family_base_lun": {"UnityLun": {"hash": 8730828416273, "id": "sv_88"}}, "family_clone_count": 0, "hash": 8730828709693, "health": {"UnityHealth": {"hash": 8730829017445}}, "id": "sv_88", "is_advanced_dedup_enabled": true, "is_data_reduction_enabled": true, "is_replication_destination": false, "is_snap_schedule_paused": false, "is_thin_clone": false, "is_thin_enabled": true, "metadata_size": 3758096384, "metadata_size_allocated": 3221225472, "name": "sarah237", "per_tier_size_used": [3489660928, 0, 0], "pool": {"UnityPool": {"hash": 8730828997265}}, "size_allocated": 0, "size_total": 2147483648, "snap_count": 0, "snap_wwn": "60:06:01:60:4A:50:4E:00:5C:64:92:DB:2E:7F:49:96", "snaps_size": 0, "snaps_size_allocated": 0, "storage_resource": {"UnityStorageResource": {"hash": 8730828822377}}, "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH", "type": "LUNTypeEnum.STANDALONE", "wwn": "60:06:01:60:4A:50:4E:00:4A:EE:31:67:EA:8F:9D:E9"}} 
+2024-11-11 16:45:04,824 volume.py INFO : Successfully got the volume object {"UnityLun": {"current_node": "NodeEnum.SPB", "data_reduction_percent": 0, "data_reduction_ratio": 1.0, "data_reduction_size_saved": 0, "default_node": "NodeEnum.SPB", "existed": true, "family_base_lun": {"UnityLun": {"hash": 8730827578517, "id": "sv_88"}}, "family_clone_count": 0, "hash": 8730828295373, "health": {"UnityHealth": {"hash": 8730828296053}}, "id": "sv_88", "is_advanced_dedup_enabled": true, "is_data_reduction_enabled": true, "is_replication_destination": false, "is_snap_schedule_paused": false, "is_thin_clone": false, "is_thin_enabled": true, "metadata_size": 3758096384, "metadata_size_allocated": 3221225472, "name": "sarah237", "per_tier_size_used": [3489660928, 0, 0], "pool": {"UnityPool": {"hash": 8730827578925}}, "size_allocated": 0, "size_total": 2147483648, "snap_count": 0, "snap_wwn": "60:06:01:60:4A:50:4E:00:5C:64:92:DB:2E:7F:49:96", "snaps_size": 0, "snaps_size_allocated": 0, "storage_resource": {"UnityStorageResource": {"hash": 8730827757749}}, "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH", "type": "LUNTypeEnum.STANDALONE", "wwn": "60:06:01:60:4A:50:4E:00:4A:EE:31:67:EA:8F:9D:E9"}} 
+2024-11-11 16:46:00,147 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-11 16:46:00,148 info.py INFO : Getting array details 
+2024-11-11 16:46:02,903 info.py INFO : Getting volumes list 
+2024-11-11 16:46:04,854 info.py INFO : Successfully listed.
