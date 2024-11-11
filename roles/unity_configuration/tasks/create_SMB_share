@@ -1,0 +1,49 @@
+---
+- name: Create SMB share for a filesystem
+  dellemc.unity.smbshare:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    share_name: "{{ SMB_share_name }}"
+    filesystem_name: "parent"
+    nas_server_name: "Test_Async"
+    path: "parent"
+    description: "Sample SMB share created"
+    is_abe_enabled: True
+    is_branch_cache_enabled: True
+    offline_availability: "DOCUMENTS"
+    is_continuous_availability_enabled: True
+    is_encryption_enabled: True
+    umask: "777"
+    state: "present"
+
+- name: Get list of SMB shares on Unity array
+  dellemc.unity.info:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    gather_subset:
+      - smb_share
+  register: SMB_list
+
+- name: Display SMB Share IDs and Names
+  debug:
+    msg: "{{ item.id }}: {{ item.name }}"
+  loop: "{{ SMB_list.SMB_Shares | json_query('[].{id: id, name: name}') }}"
+
+- name: Get details of SMB share
+  dellemc.unity.smbshare:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    share_name: "{{ Get_info_SMB }}"
+    nas_server_name: "{{ Get_info_SMB_Nas }}"
+    state: "present"
+  register: smb_share_details
+
+- name: Print SMB Share details
+  debug:
+    var: smb_share_details

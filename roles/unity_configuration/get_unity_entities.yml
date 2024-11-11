@@ -1,0 +1,31 @@
+- name: Get detailed list of Unity entities
+  dellemc.unity.info:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    gather_subset:
+      - host
+      - fc_initiator
+      - iscsi_initiator
+      - cg
+      - storage_pool
+      - vol
+      - snapshot_schedule
+      - nas_server
+      - file_system
+      - snapshot
+      - nfs_export
+      - smb_share
+      - user_quota
+      - tree_quota
+      - disk_group
+      - nfs_server
+      - cifs_server
+      - ethernet_port
+      - file_interface
+  register: unity_info
+
+#- name: Print Unity information
+ # ansible.builtin.debug:
+  #  var: unity_info

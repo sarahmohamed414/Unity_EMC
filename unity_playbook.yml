@@ -1,0 +1,25 @@
+- name: Manage Unity
+  hosts: unity
+  connection: local
+  gather_facts: false
+  become: true
+  vars:
+    ansible_python_interpreter: /ansible/unity_venv/bin/python3
+
+  vars_prompt:
+    - name: "vol_name"
+      prompt: "Enter the volume name"
+      private: no
+    - name: "SMB_share_name"
+      prompt: "Enter the SMB share that you want to create"
+      private: no
+    - name: "Get_info_SMB"
+      prompt: "Enter the SMB share that you want to get informtion about"
+      private: no
+    - name: "Get_info_SMB_Nas"
+      prompt: "Enter the Nas server that the share resides on"
+      private: no
+  tasks:
+    - name: Include unity_configuration role
+      ansible.builtin.include_role:
+        name: unity_configuration

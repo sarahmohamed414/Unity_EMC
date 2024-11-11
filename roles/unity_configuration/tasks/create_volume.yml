@@ -1,0 +1,14 @@
+- name: Create volume
+  dellemc.unity.volume:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    vol_name: "{{ vol_name }}"
+    pool_name: pool0
+    size: 2
+    is_thin: True
+    compression: True
+    advanced_dedup: True
+    state: present
+

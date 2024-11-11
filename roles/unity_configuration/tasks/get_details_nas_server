@@ -1,0 +1,8 @@
+- name: Get Details of NAS Server
+  dellemc.unity.nasserver:
+    unispherehost: "{{unispherehost}}"
+    username: "{{username}}"
+    password: "{{password}}"
+    validate_certs: "{{validate_certs}}"
+    nas_server_name: "{{nas_server_name}}"
+    state: "present"
