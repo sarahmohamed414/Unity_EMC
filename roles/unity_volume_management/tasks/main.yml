@@ -1,0 +1,12 @@
+---
+- name: Create a volume
+  ansible.builtin.import_tasks: create_volume.yml
+
+- name: Get info of all volumes
+  ansible.builtin.import_tasks: get_info_volumes.yml
+
+- name: Delete a volume
+  ansible.builtin.import_tasks: delete_volume.yml
+
+- name: Rename a volume; Modify a volume
+  ansible.builtin.import_tasks: rename_volume.yml

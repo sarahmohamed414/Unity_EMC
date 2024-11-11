@@ -1,0 +1,3988 @@
+Enter the volume name that you want to create: Enter the SMB share that you want to create: Enter the SMB share that you want to get informtion about: Enter the Nas server that the share resides on: 
+PLAY [Manage Unity] ************************************************************
+
+TASK [Include unity_configuration role] ****************************************
+included: unity_configuration for 10.241.167.231
+
+TASK [unity_configuration : Create volume] *************************************
+changed: [10.241.167.231]
+
+TASK [unity_configuration : Get information of all volumes on Unity array] *****
+ok: [10.241.167.231]
+
+TASK [unity_configuration : Debug all volumes information] *********************
+ok: [10.241.167.231] => {
+    "all_volumes": {
+        "Array_Details": {
+            "api_version": "14.0",
+            "earliest_api_version": "4.0",
+            "existed": true,
+            "hash": 8737104294237,
+            "id": "0",
+            "model": "Unity 450F",
+            "name": "Unity450F-R14",
+            "software_version": "5.4.0"
+        },
+        "CIFS_Servers": [],
+        "Consistency_Groups": [],
+        "Disk_Groups": [],
+        "Ethernet_ports": [],
+        "FC_initiators": [],
+        "File_Systems": [],
+        "File_interfaces": [],
+        "Hosts": [],
+        "ISCSI_initiators": [],
+        "NAS_Servers": [],
+        "NFS_Exports": [],
+        "NFS_Servers": [],
+        "Replication_sessions": [],
+        "SMB_Shares": [],
+        "Snapshot_Schedules": [],
+        "Snapshots": [],
+        "Storage_Pools": [],
+        "Tree_Quotas": [],
+        "User_Quotas": [],
+        "Volumes": [
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "My new description",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737104233037,
+                        "id": "sv_1"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103478013,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737104672629
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737106348309
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_1",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "NewName",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737104532921
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 10737418240,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:2F:6A:69:6E:7F:69:43:E2",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737104879465
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:F7:5D:7E:66:72:78:2E:67"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103477109,
+                        "id": "sv_2"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737104232453,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477089
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477373
+                            }
+                        },
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477121
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_2",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": true,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "LUN 2 test",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477101
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 1073741824,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:7D:BD:00:5D:E4:5D:45:7C",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477093
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:BE:59:88:66:3C:12:4A:F9"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103477169,
+                        "id": "sv_3"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103477129,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477133
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477137
+                            }
+                        },
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477161
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_3",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": true,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "LUN 3",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477141
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 3221225472,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:25:8B:93:B0:AD:07:44:20",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477105
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:BE:59:88:66:16:7C:3C:18"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103477377,
+                        "id": "sv_4"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103477405,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477417
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477421
+                            }
+                        },
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477365
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_4",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": true,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "LUN1",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477425
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 1073741824,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:63:44:0A:96:DF:AB:4D:1C",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477149
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:BE:59:88:66:D4:56:7A:2E"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103477329,
+                        "id": "sv_5"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103477381,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477385
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477293
+                            }
+                        },
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477321
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_5",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": true,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "LUN 4",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477297
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 4294967296,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:C3:FC:D0:F0:44:CC:46:F2",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477353
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:D3:5B:88:66:4A:9F:66:8D"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103477257,
+                        "id": "sv_6"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103477305,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477337
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477341
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_6",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 6979321856,
+                "metadata_size_allocated": 2684354560,
+                "name": "1 LUN",
+                "per_tier_size_used": [
+                    3221225472,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477345
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 1073741824,
+                "size_used": null,
+                "snap_count": 1,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:68:52:30:E4:76:FE:4B:26",
+                "snaps_size": 1073741824,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477333
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:C4:5C:88:66:8E:C9:24:02"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103477245,
+                        "id": "sv_7"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103477261,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477269
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477273
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_7",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 6979321856,
+                "metadata_size_allocated": 2684354560,
+                "name": "2 LUN",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477277
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 1,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:D2:79:F0:D5:FF:C5:42:CC",
+                "snaps_size": 2147483648,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477229
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:C5:5C:88:66:7B:DC:00:A3"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103477209,
+                        "id": "sv_8"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103477197,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477213
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477217
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_8",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 6979321856,
+                "metadata_size_allocated": 2684354560,
+                "name": "3 LUN",
+                "per_tier_size_used": [
+                    3221225472,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477221
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 3221225472,
+                "size_used": null,
+                "snap_count": 1,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:CA:35:82:0B:FA:A0:4D:FD",
+                "snaps_size": 3221225472,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477265
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:C5:5C:88:66:4F:E1:13:FF"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103477069,
+                        "id": "sv_9"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103477177,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477181
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477185
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_9",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 6979321856,
+                "metadata_size_allocated": 2684354560,
+                "name": "4 LUN",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477189
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 4294967296,
+                "size_used": null,
+                "snap_count": 1,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:11:88:66:3E:44:D7:4E:12",
+                "snaps_size": 4294967296,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477233
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:E4:61:88:66:67:1B:A6:DE"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103477041,
+                        "id": "sv_10"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103477313,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477073
+                    }
+                },
+                "host_access": null,
+                "id": "sv_10",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": true,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "Test_LUN123",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477037
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 1,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:90:F5:F0:A6:E2:E8:49:F8",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477053
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:4B:D6:8B:66:D5:58:3C:C2"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103476985,
+                        "id": "sv_11"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103477045,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103477049
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103477057
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_11",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": false,
+                "metadata_size": 6174015488,
+                "metadata_size_allocated": 5905580032,
+                "name": "Jtest",
+                "per_tier_size_used": [
+                    328028127232,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477001
+                    }
+                },
+                "size_allocated": 322122547200,
+                "size_total": 322122547200,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:F1:89:A7:CE:D1:AA:4F:44",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477033
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:BD:B7:94:66:EE:63:A0:82"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103476865,
+                        "id": "sv_12"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103476969,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103476989
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103476905
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_12",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 8589934592,
+                "metadata_size_allocated": 7516192768,
+                "name": "Test_Vdbench",
+                "per_tier_size_used": [
+                    363193171968,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103476909
+                    }
+                },
+                "size_allocated": 353538064384,
+                "size_total": 536870912000,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:78:3C:96:4C:CF:AC:4E:2B",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103476965
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:D6:72:98:66:0A:72:60:BC"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103476889,
+                        "id": "sv_13"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103476869,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103476877
+                    }
+                },
+                "host_access": null,
+                "id": "sv_13",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "1gbe",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103476885
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 5368709120,
+                "size_used": null,
+                "snap_count": 1,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:4A:38:DE:D8:3C:92:42:35",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103476945
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:74:66:9F:66:11:87:30:22"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103476769,
+                        "id": "sv_14"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103476873,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103476893
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103476897
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_14",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 8321499136,
+                "metadata_size_allocated": 3758096384,
+                "name": "Mtest",
+                "per_tier_size_used": [
+                    5905580032,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103476793
+                    }
+                },
+                "size_allocated": 106168320,
+                "size_total": 536870912000,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:CE:41:AA:91:1D:CA:42:D3",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103476881
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:44:88:B0:66:FC:FB:DC:CD"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "created to explain to customer about allocated space versus subscription",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103503621,
+                        "id": "sv_15"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103476773,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103476777
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103476781
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_15",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 6442450944,
+                "metadata_size_allocated": 2684354560,
+                "name": "JohnJ-Allocate",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103476789
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 325343772672,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:B5:1A:D6:80:EB:82:4E:2F",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103476841
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:36:0B:B9:66:3C:47:F6:12"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103503709,
+                        "id": "sv_16"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103503717,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103503617
+                    }
+                },
+                "host_access": null,
+                "id": "sv_16",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "CG bandwidth-1",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103503613
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 3221225472,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:9F:D3:37:7A:31:5D:4C:07",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103503725
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:2F:CE:BA:66:45:5C:16:14"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103503693,
+                        "id": "sv_17"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103503609,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103503705
+                    }
+                },
+                "host_access": null,
+                "id": "sv_17",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "CG bandwidth-2",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103503697
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 3221225472,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:BC:51:D7:C4:13:93:41:38",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103503713
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:2F:CE:BA:66:B3:79:B9:32"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103503673,
+                        "id": "sv_18"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103503689,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103503685
+                    }
+                },
+                "host_access": null,
+                "id": "sv_18",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "CG bandwidth-3",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103503677
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 3221225472,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:AF:9A:84:B7:C6:15:4B:32",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103503605
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:30:CE:BA:66:F8:76:E1:EB"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103503653,
+                        "id": "sv_19"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103503669,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103503665
+                    }
+                },
+                "host_access": null,
+                "id": "sv_19",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "CG bandwidth-4",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103503657
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 3221225472,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:6D:09:07:FB:B0:25:43:97",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103503585
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:30:CE:BA:66:6D:DC:92:00"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103503365,
+                        "id": "sv_20"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103503649,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103503645
+                    }
+                },
+                "host_access": null,
+                "id": "sv_20",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "CG bandwidth-5",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103503637
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 3221225472,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:CD:AB:D5:AE:BE:ED:4B:EC",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103503565
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:30:CE:BA:66:F4:D1:1B:4A"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103503441,
+                        "id": "sv_21"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103503529,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103503521
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103503517
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_21",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 3758096384,
+                "name": "U-1",
+                "per_tier_size_used": [
+                    5905580032,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103503505
+                    }
+                },
+                "size_allocated": 72114176,
+                "size_total": 10737418240,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:FE:E0:1F:86:90:AD:47:E2",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103503545
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:38:61:BC:66:F3:56:39:74"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103503373,
+                        "id": "sv_22"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103503437,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103503433
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103503429
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_22",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 4563402752,
+                "name": "U-2",
+                "per_tier_size_used": [
+                    96905199616,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103503425
+                    }
+                },
+                "size_allocated": 90147381248,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:2B:61:F2:0C:80:04:45:20",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103503457
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.GENERIC",
+                "wwn": "60:06:01:60:3D:50:4E:00:38:61:BC:66:32:3A:41:6C"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103504345,
+                        "id": "sv_23"
+                    }
+                },
+                "family_clone_count": 1,
+                "hash": 8737103503369,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103504333
+                    }
+                },
+                "host_access": null,
+                "id": "sv_23",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 8589934592,
+                "metadata_size_allocated": 2684354560,
+                "name": "test",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103504341
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 3,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:B9:F1:15:47:4B:1D:48:66",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103503389
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:E4:00:C3:66:1C:0F:5E:7D"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493429,
+                        "id": "sv_23"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103504349,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103504357
+                    }
+                },
+                "host_access": null,
+                "id": "sv_24",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": true,
+                "is_thin_enabled": true,
+                "metadata_size": 0,
+                "metadata_size_allocated": 0,
+                "name": "clone-test",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103504353
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 12,
+                "snap_schedule": {
+                    "UnitySnapSchedule": {
+                        "hash": 8737103504377,
+                        "id": "snapSch_10"
+                    }
+                },
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:58:31:7A:71:2D:88:4D:8E",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103504337
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:7C:01:C3:66:B7:67:7A:61"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "Ansible demo",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493453,
+                        "id": "sv_25"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493433,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493437
+                    }
+                },
+                "host_access": null,
+                "id": "sv_25",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "New_Ansible_vol1_test",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493449
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:72:C9:DB:84:F7:DB:49:EA",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493425
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.LOWEST",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:B1:EB:C3:66:53:92:A4:28"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493973,
+                        "id": "sv_26"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493457,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493461
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103493957
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_26",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": false,
+                "metadata_size": 5100273664,
+                "metadata_size_allocated": 4831838208,
+                "name": "KingTest_Thick",
+                "per_tier_size_used": [
+                    219580203008,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493941
+                    }
+                },
+                "size_allocated": 214748364800,
+                "size_total": 214748364800,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:6E:0F:E9:4E:1B:82:46:BE",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493441
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:14:DD:C6:66:D4:8D:75:EA"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493921,
+                        "id": "sv_27"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493977,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493981
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103493985
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_27",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 5100273664,
+                "metadata_size_allocated": 4294967296,
+                "name": "KingTest_Thin",
+                "per_tier_size_used": [
+                    29527900160,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493989
+                    }
+                },
+                "size_allocated": 23147659264,
+                "size_total": 214748364800,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:64:8B:25:68:79:69:4F:26",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493965
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:5F:DD:C6:66:46:8B:EB:53"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493901,
+                        "id": "sv_28"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493925,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493933
+                    }
+                },
+                "host_access": null,
+                "id": "sv_28",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "testVMware",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493905
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:E9:11:A4:6A:52:10:4B:86",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493909
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:14:39:CC:66:22:CA:E6:15"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493881,
+                        "id": "sv_31"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493861,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493869
+                    }
+                },
+                "host_access": null,
+                "id": "sv_31",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "zzzTest01",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493877
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 108447924224,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:E5:B9:F7:23:95:4F:47:E2",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493885
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:76:82:DA:66:18:BF:54:95"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493845,
+                        "id": "sv_32"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493889,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493893
+                    }
+                },
+                "host_access": null,
+                "id": "sv_32",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "zzzTest02",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493841
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 109521666048,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:30:44:FE:35:F4:54:4B:4F",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493873
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:86:82:DA:66:58:81:5B:52"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493773,
+                        "id": "sv_34"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493849,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493853
+                    }
+                },
+                "host_access": null,
+                "id": "sv_34",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "Same_Name-1",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493865
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:7E:39:B0:A5:BD:ED:40:83",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493897
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:CD:B1:E4:66:8A:9C:F3:09"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493797,
+                        "id": "sv_35"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493777,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493781
+                    }
+                },
+                "host_access": null,
+                "id": "sv_35",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "Same_Name-2",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493789
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:04:25:46:09:94:34:49:BA",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493857
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:CD:B1:E4:66:57:A8:89:A1"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493813,
+                        "id": "sv_36"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493801,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493805
+                    }
+                },
+                "host_access": null,
+                "id": "sv_36",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "Same_Name-3",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493793
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:3D:50:4E:00:B5:B1:B4:E7:F6:06:46:7B",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493785
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:3D:50:4E:00:CE:B1:E4:66:28:19:94:F3"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493725,
+                        "id": "sv_37"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493817,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493821
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103493825
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_37",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "LUN 0",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493829
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 5368709120,
+                "size_used": null,
+                "snap_count": 1,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:ED:68:5D:B9:9A:D2:46:58",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493809
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:35:CD:08:67:9B:5E:AC:7F"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493761,
+                        "id": "sv_38"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493729,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493733
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103493741
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_38",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 5100273664,
+                "metadata_size_allocated": 2684354560,
+                "name": "archdg",
+                "per_tier_size_used": [
+                    3221225472,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493745
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 214748364800,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:2A:49:77:B6:56:A3:48:87",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493837
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:D1:19:12:67:61:30:84:1B"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493577,
+                        "id": "sv_39"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493765,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493769
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103493665
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_39",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4026531840,
+                "metadata_size_allocated": 2684354560,
+                "name": "pdy",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493669
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 75161927680,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:3E:B8:64:B8:4D:1E:48:A0",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493753
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:CF:19:16:67:E5:C5:1D:A2"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493645,
+                        "id": "sv_40"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493581,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493585
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103493589
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_40",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 2684354560,
+                "name": "ooo",
+                "per_tier_size_used": [
+                    3221225472,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493597
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 50465865728,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:B8:33:02:AF:0A:2D:46:8B",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493705
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:F2:19:16:67:57:22:3F:E7"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493553,
+                        "id": "sv_41"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493649,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493653
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103493657
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_41",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4026531840,
+                "metadata_size_allocated": 2684354560,
+                "name": "pppppppp",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493661
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 94489280512,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:8C:74:26:67:A3:2D:4A:B1",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493629
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:DB:1A:16:67:91:8E:50:63"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493337,
+                        "id": "sv_42"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493557,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493561
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103493565
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_42",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "yyyyyyyyyyyyyy",
+                "per_tier_size_used": [
+                    3221225472,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493569
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:79:B0:B8:42:30:C0:40:B9",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493541
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:86:1C:16:67:58:FF:DE:6E"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493405,
+                        "id": "sv_43"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493341,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493345
+                    }
+                },
+                "host_access": {
+                    "UnityBlockHostAccessList": [
+                        {
+                            "UnityBlockHostAccess": {
+                                "hash": 8737103493353
+                            }
+                        }
+                    ]
+                },
+                "id": "sv_43",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 3758096384,
+                "name": "W111JDMDL3_LUN-1",
+                "per_tier_size_used": [
+                    5905580032,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493357
+                    }
+                },
+                "size_allocated": 72589312,
+                "size_total": 10737418240,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:3E:21:BE:A7:5F:E6:4D:D2",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493501
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:9C:58:16:67:62:3A:64:10"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493213,
+                        "id": "sv_44"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493409,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493413
+                    }
+                },
+                "host_access": null,
+                "id": "sv_44",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "W111JDMDL3_LUN-2",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493421
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 10737418240,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:0F:BF:80:90:70:BF:4F:65",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493389
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:9C:58:16:67:BD:27:9F:7C"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493249,
+                        "id": "sv_74"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493217,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493221
+                    }
+                },
+                "host_access": null,
+                "id": "sv_74",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": false,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 4026531840,
+                "name": "jkl",
+                "per_tier_size_used": [
+                    111400714240,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493241
+                    }
+                },
+                "size_allocated": 107374182400,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:42:CA:6B:77:6E:24:40:C6",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493417
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:92:1A:23:67:1D:23:08:1D"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493285,
+                        "id": "sv_75"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493253,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493261
+                    }
+                },
+                "host_access": null,
+                "id": "sv_75",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "test1",
+                "per_tier_size_used": [
+                    3221225472,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493277
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:1A:E8:29:9D:5F:68:46:57",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493225
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.VMWARE_ISCSI",
+                "wwn": "60:06:01:60:4A:50:4E:00:06:68:28:67:56:AE:4C:94"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493325,
+                        "id": "sv_77"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493293,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493301
+                    }
+                },
+                "host_access": null,
+                "id": "sv_77",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": true,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3489660928,
+                "metadata_size_allocated": 2684354560,
+                "name": "rep test lun",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493317
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 5368709120,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:CC:2C:6C:13:E4:47:4C:4F",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493265
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:EC:7A:2C:67:B0:BB:3A:09"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493193,
+                        "id": "sv_78"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493177,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493185
+                    }
+                },
+                "host_access": null,
+                "id": "sv_78",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarag",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493205
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:60:2D:31:FC:E6:16:4D:B7",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493305
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:D6:C8:30:67:8F:B3:A9:46"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103493149,
+                        "id": "sv_79"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493165,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493125
+                    }
+                },
+                "host_access": null,
+                "id": "sv_79",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103493141
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:17:22:CE:3B:3E:26:46:3F",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103493189
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:F9:C8:30:67:22:08:8B:78"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103495177,
+                        "id": "sv_80"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103493157,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103493129
+                    }
+                },
+                "host_access": null,
+                "id": "sv_80",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "sg-1",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103477625
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:02:A5:7C:40:14:1E:4E:94",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103477685
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:3A:E3:31:67:2B:14:22:81"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": "",
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103495237,
+                        "id": "sv_81"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103495269,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103495261
+                    }
+                },
+                "host_access": null,
+                "id": "sv_81",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": false,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": false,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 4294967296,
+                "metadata_size_allocated": 2684354560,
+                "name": "sg-2",
+                "per_tier_size_used": [
+                    2952790016,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103495245
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 107374182400,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:51:92:05:85:F6:80:4F:8E",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103495181
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:3A:E3:31:67:74:2A:54:BC"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103495197,
+                        "id": "sv_82"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103495229,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103495221
+                    }
+                },
+                "host_access": null,
+                "id": "sv_82",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah_volume",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103495205
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:B4:2E:0B:E1:C5:DE:44:85",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103495257
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:4E:E8:31:67:FF:55:3C:75"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103496177,
+                        "id": "sv_83"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103495189,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103495173
+                    }
+                },
+                "host_access": null,
+                "id": "sv_83",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah_v1",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103496165
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:D8:DD:0C:BD:7C:8D:4D:63",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103495217
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:38:EB:31:67:58:A4:5B:D6"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103496005,
+                        "id": "sv_84"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103496185,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103496173
+                    }
+                },
+                "host_access": null,
+                "id": "sv_84",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah_v11",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103495993
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:85:20:58:DA:3E:8C:4F:E4",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103496153
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:D4:EB:31:67:D6:78:70:87"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103496041,
+                        "id": "sv_85"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103496013,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103496001
+                    }
+                },
+                "host_access": null,
+                "id": "sv_85",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah_v2",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103496033
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:E2:D3:EF:FE:B7:98:45:64",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103495981
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:15:EC:31:67:3D:05:D8:83"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103496081,
+                        "id": "sv_86"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103496049,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103496057
+                    }
+                },
+                "host_access": null,
+                "id": "sv_86",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah_v3",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103496073
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:97:91:79:3C:4D:66:42:3C",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103496021
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:9B:EC:31:67:4F:B0:29:B3"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103496121,
+                        "id": "sv_87"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103496089,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103496097
+                    }
+                },
+                "host_access": null,
+                "id": "sv_87",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah_v4",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103496113
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:14:8E:93:75:72:95:4E:FC",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103496061
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:07:ED:31:67:AA:4F:94:A4"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103495889,
+                        "id": "sv_88"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103496129,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103496137
+                    }
+                },
+                "host_access": null,
+                "id": "sv_88",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah_y1",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103495881
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:5C:64:92:DB:2E:7F:49:96",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103496101
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:4A:EE:31:67:EA:8F:9D:E9"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103495929,
+                        "id": "sv_89"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103495897,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103495909
+                    }
+                },
+                "host_access": null,
+                "id": "sv_89",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "a",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103495921
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:FA:68:A6:73:8A:29:48:8D",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103496141
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:2B:EF:31:67:FF:2D:0E:40"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103495969,
+                        "id": "sv_90"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103495937,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103495945
+                    }
+                },
+                "host_access": null,
+                "id": "sv_90",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "l",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103495961
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:CA:F7:C5:18:2C:00:4F:A6",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103495913
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:F2:EF:31:67:D4:E6:D4:CB"
+            },
+            {
+                "current_node": "NodeEnum.SPA",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPA",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103495865,
+                        "id": "sv_91"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103495977,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103495837
+                    }
+                },
+                "host_access": null,
+                "id": "sv_91",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah_v33",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103495857
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:A6:C4:53:B2:DF:AA:4B:ED",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103495949
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:55:F0:31:67:B7:7A:7C:0F"
+            },
+            {
+                "current_node": "NodeEnum.SPB",
+                "data_reduction_percent": 0,
+                "data_reduction_ratio": 1.0,
+                "data_reduction_size_saved": 0,
+                "default_node": "NodeEnum.SPB",
+                "description": null,
+                "effective_io_limit_max_iops": null,
+                "effective_io_limit_max_kbps": null,
+                "existed": true,
+                "family_base_lun": {
+                    "UnityLun": {
+                        "hash": 8737103495821,
+                        "id": "sv_92"
+                    }
+                },
+                "family_clone_count": 0,
+                "hash": 8737103495853,
+                "health": {
+                    "UnityHealth": {
+                        "hash": 8737103495877
+                    }
+                },
+                "host_access": null,
+                "id": "sv_92",
+                "io_limit_policy": null,
+                "is_advanced_dedup_enabled": true,
+                "is_compression_enabled": null,
+                "is_data_reduction_enabled": true,
+                "is_replication_destination": false,
+                "is_snap_schedule_paused": false,
+                "is_thin_clone": false,
+                "is_thin_enabled": true,
+                "metadata_size": 3758096384,
+                "metadata_size_allocated": 3221225472,
+                "name": "sarah_mohh",
+                "per_tier_size_used": [
+                    3489660928,
+                    0,
+                    0
+                ],
+                "pool": {
+                    "UnityPool": {
+                        "hash": 8737103495809
+                    }
+                },
+                "size_allocated": 0,
+                "size_total": 2147483648,
+                "size_used": null,
+                "snap_count": 0,
+                "snap_schedule": null,
+                "snap_wwn": "60:06:01:60:4A:50:4E:00:10:91:65:BB:0B:FD:4C:BE",
+                "snaps_size": 0,
+                "snaps_size_allocated": 0,
+                "storage_resource": {
+                    "UnityStorageResource": {
+                        "hash": 8737103495841
+                    }
+                },
+                "tiering_policy": "TieringPolicyEnum.AUTOTIER_HIGH",
+                "type": "LUNTypeEnum.STANDALONE",
+                "wwn": "60:06:01:60:4A:50:4E:00:1F:F1:31:67:6A:39:EE:95"
+            }
+        ],
+        "changed": false,
+        "failed": false
+    }
+}
+
+PLAY RECAP *********************************************************************
+10.241.167.231             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

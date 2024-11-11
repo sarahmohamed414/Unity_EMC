@@ -1,0 +1,9 @@
+- name: Modify Volume attributes
+  dellemc.unity.volume:
+    unispherehost: "{{unispherehost}}"
+    username: "{{username}}"
+    password: "{{password}}"
+    validate_certs: "{{validate_certs}}"
+    vol_name: "{{vol_name_to_modify}}"
+    new_vol_name: "{{new_vol_name}}"
+    state: present

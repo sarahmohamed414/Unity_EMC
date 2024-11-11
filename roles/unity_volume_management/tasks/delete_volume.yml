@@ -1,0 +1,8 @@
+- name: Delete Volume by vol name
+  dellemc.unity.volume:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    vol_name: "{{ vol_name_del }}"
+    state: absent

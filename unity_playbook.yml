@@ -8,7 +8,16 @@
 
   vars_prompt:
     - name: "vol_name"
-      prompt: "Enter the volume name"
+      prompt: "Enter the volume name that you want to create"
+      private: no
+    - name: "vol_name_del"
+      prompt: "Enter the volume name that you want to delete"
+      private: no
+    - name: "vol_name_to_modify"
+      prompt: "Enter the volume name that you want to rename"
+      private: no
+    - name: "new_vol_name"
+      prompt: "Enter the new volume name"
       private: no
     - name: "SMB_share_name"
       prompt: "Enter the SMB share that you want to create"
@@ -22,4 +31,4 @@
   tasks:
     - name: Include unity_configuration role
       ansible.builtin.include_role:
-        name: unity_configuration
+        name: unity_volume_management
