@@ -7,10 +7,7 @@
     vol_name: "{{ vol_name }}"
     pool_name: pool0
     size: 2
-    is_thin: True
-    compression: True
-    advanced_dedup: True
+    is_thin: true
+    compression: true
+    advanced_dedup: true
     state: present
-
-
-

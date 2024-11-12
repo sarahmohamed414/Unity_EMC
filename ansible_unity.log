@@ -191,3 +191,4 @@
 2024-11-11 16:46:00,148 info.py INFO : Getting array details 
 2024-11-11 16:46:02,903 info.py INFO : Getting volumes list 
 2024-11-11 16:46:04,854 info.py INFO : Successfully listed.
+2024-11-12 09:53:52,915 volume.py ERROR : Failed to get the volume aly with error UnityLun:aly not found.

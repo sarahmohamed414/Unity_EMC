@@ -7,30 +7,26 @@
     gather_subset:
       - vol
   register: all_volumes  # Register the result for all volumes
-
 - name: Initialize an empty list
-  set_fact:
+  ansible.legacy.set_fact:
     volume_ids: []
-
 - name: Append each volume's id to the list
-  set_fact:
+  ansible.legacy.set_fact:
     volume_ids: "{{ volume_ids + [item.id] }}"
   loop: "{{ all_volumes.Volumes }}"
   no_log: true
 - name: Display the collected volume IDs
-  debug:
+  ansible.legacy.debug:
     var: volume_ids
 - name: Initialize an empty list for volume names
-  set_fact:
+  ansible.legacy.set_fact:
     volume_names: []
-
 - name: Append each volume's name to the list
-  set_fact:
+  ansible.legacy.set_fact:
     volume_names: "{{ volume_names + [item.name] }}"
   loop: "{{ all_volumes.Volumes }}"
   no_log: true
 
 - name: Display the collected volume names
-  debug:
+  ansible.legacy.debug:
     var: volume_names
-

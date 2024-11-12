@@ -11,4 +11,3 @@
 - name: Delete a volume
   ansible.builtin.import_tasks: delete_volume.yml
   when: user_input == "4"
-
