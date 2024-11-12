@@ -27,15 +27,6 @@
     - name: "new_vol_name"
       prompt: "Enter the new volume name"
       private: false
-    - name: "SMB_share_name"
-      prompt: "Enter the SMB share that you want to create"
-      private: false
-    - name: "Get_info_SMB"
-      prompt: "Enter the SMB share that you want to get information about"
-      private: false
-    - name: "Get_info_SMB_Nas"
-      prompt: "Enter the Nas server that the share resides on"
-      private: false
 
   tasks:
     - name: Include unity_configuration role

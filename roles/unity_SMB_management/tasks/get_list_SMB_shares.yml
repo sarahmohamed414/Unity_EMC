@@ -1,0 +1,32 @@
+- name: Get list of SMB shares on Unity array
+  dellemc.unity.info:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    gather_subset:
+      - smb_share
+  register: all_SMB_Shares  # Register the result for all SMB Shares
+- name: Initialize an empty list
+  ansible.legacy.set_fact:
+    SMB_ids: []
+- name: Append each SMB share's id to the list
+  ansible.legacy.set_fact:
+    SMB_ids: "{{ SMB_ids + [item.id] }}"
+  loop: "{{ all_SMB_Shares.SMB_Shares }}"
+  no_log: true
+- name: Display the collected SMB IDs
+  ansible.legacy.debug:
+    var: SMB_ids
+- name: Initialize an empty list for SMB share names
+  ansible.legacy.set_fact:
+    SMB_names: []
+- name: Append each SMB share's name to the list
+  ansible.legacy.set_fact:
+    SMB_names: "{{ SMB_names + [item.name] }}"
+  loop: "{{ all_SMB_Shares.SMB_Shares }}"
+  no_log: true
+
+- name: Display the collected SMB names
+  ansible.legacy.debug:
+    var: SMB_names

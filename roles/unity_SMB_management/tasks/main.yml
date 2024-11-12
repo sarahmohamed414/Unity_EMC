@@ -1,0 +1,13 @@
+---
+- name: Get detailed list of Unity entities
+  ansible.builtin.import_tasks: get_unity_entities.yml
+  when: user_input == "1"
+- name: Get list of SMB share names and IDs
+  when: user_input == "2"
+  ansible.builtin.import_tasks: get_list_SMB_shares.yml
+- name: Get Details of SMB share
+  ansible.builtin.import_tasks: get_details_SMB_share.yml
+  when: user_input == "3"
+- name: Create SMB Share
+  ansible.builtin.import_tasks: create_SMB_share.yml
+  when: user_input == "4"

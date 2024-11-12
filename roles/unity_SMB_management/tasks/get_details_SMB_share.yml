@@ -1,0 +1,14 @@
+- name: Get details of SMB share
+  dellemc.unity.smbshare:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    share_name: "{{ Get_info_SMB }}"
+    nas_server_name: "Test_Async"
+    state: "present"
+  register: smb_share_details
+
+- name: Print SMB Share details
+  debug:
+    var: smb_share_details

@@ -1,0 +1,43 @@
+- name: Manage Unity
+  hosts: unity
+  connection: local
+  gather_facts: false
+  become: true
+  vars:
+    ansible_python_interpreter: /ansible/unity_venv/bin/python3
+
+  vars_prompt:
+    - name: user_input
+      prompt: |
+        Please select an action:
+        1. Get list of FileSystems names and ids
+        2. Create a FileSystem
+        3. Rename a FileSystem
+        4. Delete a FileSystem
+      private: false
+    - name: "vol_name"
+      prompt: "Enter the volume name that you want to create"
+      private: false
+    - name: "vol_name_del"
+      prompt: "Enter the volume name that you want to delete"
+      private: false
+    - name: "vol_name_to_modify"
+      prompt: "Enter the volume name that you want to rename"
+      private: false
+    - name: "new_vol_name"
+      prompt: "Enter the new volume name"
+      private: false
+    - name: "SMB_share_name"
+      prompt: "Enter the SMB share that you want to create"
+      private: false
+    - name: "Get_info_SMB"
+      prompt: "Enter the SMB share that you want to get information about"
+      private: false
+    - name: "Get_info_SMB_Nas"
+      prompt: "Enter the Nas server that the share resides on"
+      private: false
+
+  tasks:
+    - name: Include unity_configuration role
+      ansible.builtin.include_role:
+        name: unity_FileSystem_management

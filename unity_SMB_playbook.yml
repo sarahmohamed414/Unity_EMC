@@ -1,0 +1,28 @@
+- name: Manage Unity
+  hosts: unity
+  connection: local
+  gather_facts: false
+  become: true
+  vars:
+    ansible_python_interpreter: /ansible/unity_venv/bin/python3
+
+  vars_prompt:
+    - name: user_input
+      prompt: |
+        Please select an action:
+        1. Get detailed list of Unity entities
+        2. Get list of SMB share names and IDs
+        3. Get Details of SMB share
+        4.  Create SMB Share
+      private: false
+    - name: "SMB_share_name"
+      prompt: "Enter the SMB share that you want to create"
+      private: false
+    - name: "Get_info_SMB"
+      prompt: "Enter the SMB share that you want to get information about"
+      private: false
+
+  tasks:
+    - name: Include unity_configuration role
+      ansible.builtin.include_role:
+        name: unity_SMB_management

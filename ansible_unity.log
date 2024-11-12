@@ -261,3 +261,84 @@
 2024-11-12 12:12:59,329 volume.py ERROR : Failed to get the volume sarah with error UnityLun:sarah not found.
 2024-11-12 12:13:43,298 volume.py ERROR : Failed to get the volume s with error UnityLun:s not found.
 2024-11-12 12:13:46,558 volume.py ERROR : Failed to get the volume asa with error UnityLun:asa not found.
+2024-11-12 13:25:47,927 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-12 13:25:47,928 info.py INFO : Getting array details 
+2024-11-12 13:25:50,741 info.py INFO : Getting volumes list 
+2024-11-12 13:25:52,856 info.py INFO : Successfully listed.
+2024-11-12 13:45:00,414 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-12 13:45:00,414 info.py INFO : Getting array details 
+2024-11-12 13:45:03,264 info.py INFO : Getting hosts list 
+2024-11-12 13:45:05,832 info.py INFO : Successfully listed.
+2024-11-12 13:45:05,835 info.py INFO : Getting FC initiators list 
+2024-11-12 13:45:06,808 info.py INFO : Successfully listed.
+2024-11-12 13:45:06,809 info.py INFO : Getting ISCSI initiators list 
+2024-11-12 13:45:07,355 info.py INFO : Successfully listed.
+2024-11-12 13:45:07,355 info.py INFO : Getting consistency groups list 
+2024-11-12 13:45:08,903 info.py INFO : Successfully listed.
+2024-11-12 13:45:08,906 info.py INFO : Getting storage pools list 
+2024-11-12 13:45:10,369 info.py INFO : Successfully listed.
+2024-11-12 13:45:10,369 info.py INFO : Getting volumes list 
+2024-11-12 13:45:11,920 info.py INFO : Successfully listed.
+2024-11-12 13:45:11,989 info.py INFO : Getting snapshot schedules list 
+2024-11-12 13:45:13,175 info.py INFO : Successfully listed.
+2024-11-12 13:45:13,177 info.py INFO : Getting NAS servers list
+2024-11-12 13:45:15,251 info.py INFO : Successfully listed.
+2024-11-12 13:45:15,253 info.py INFO : Getting file systems list
+2024-11-12 13:45:16,759 info.py INFO : Successfully listed.
+2024-11-12 13:45:16,764 info.py INFO : Getting snapshots list
+2024-11-12 13:45:18,053 info.py INFO : Successfully listed.
+2024-11-12 13:45:18,066 info.py INFO : Getting NFS exports list
+2024-11-12 13:45:19,135 info.py INFO : Successfully listed.
+2024-11-12 13:45:19,137 info.py INFO : Getting SMB shares list
+2024-11-12 13:45:20,105 info.py INFO : Successfully listed.
+2024-11-12 13:45:20,107 info.py INFO : Getting user quota list
+2024-11-12 13:45:21,123 info.py INFO : Getting quota tree list
+2024-11-12 13:45:22,187 info.py INFO : Successfully listed.
+2024-11-12 13:45:22,187 info.py INFO : Getting disk group list
+2024-11-12 13:45:23,491 info.py INFO : Getting NFS servers list
+2024-11-12 13:45:24,524 info.py INFO : Successfully listed.
+2024-11-12 13:45:24,525 info.py INFO : Getting CIFS servers list
+2024-11-12 13:45:25,573 info.py INFO : Successfully listed.
+2024-11-12 13:45:25,574 info.py INFO : Getting ethernet ports list
+2024-11-12 13:45:26,919 info.py INFO : Successfully listed.
+2024-11-12 13:45:26,923 info.py INFO : Getting file interfaces list
+2024-11-12 13:45:28,185 info.py INFO : Successfully listed.
+2024-11-12 13:53:03,226 smbshare.py INFO : Connection established with the Unity Array
+2024-11-12 13:53:07,102 smbshare.py INFO : NAS Server Object: {'hash': 8772713601209, 'allow_unmapped_user': None, 'cifs_server': {'UnityCifsServerList': [{'UnityCifsServer': {'hash': 8772713943533, 'id': 'cifs_13'}}]}, 'current_sp': {'UnityStorageProcessor': {'hash': 8772714134485, 'id': 'spb'}}, 'current_unix_directory_service': 'NasServerUnixDirectoryServiceEnum.NONE', 'default_unix_user': None, 'default_windows_user': None, 'file_dns_server': None, 'file_interface': {'UnityFileInterfaceList': [{'UnityFileInterface': {'hash': 8772712802137, 'id': 'if_45'}}]}, 'filesystems': {'UnityFileSystemList': [{'UnityFileSystem': {'hash': 8772714898981, 'id': 'fs_18'}}, {'UnityFileSystem': {'hash': 8772713571921, 'id': 'fs_20'}}, {'UnityFileSystem': {'hash': 8772712791009, 'id': 'fs_21'}}]}, 'health': {'UnityHealth': {'hash': 8772714142625}}, 'home_sp': {'UnityStorageProcessor': {'hash': 8772714000977, 'id': 'spa'}}, 'id': 'nas_12', 'is_backup_only': False, 'is_multi_protocol_enabled': False, 'is_packet_reflect_enabled': False, 'is_replication_destination': False, 'is_replication_enabled': False, 'is_windows_to_unix_username_mapping_enabled': None, 'name': 'Test_Async', 'pool': {'UnityPool': {'hash': 8772714225697, 'id': 'pool_1'}}, 'preferred_interface_settings': {'UnityPreferredInterfaceSettings': {'hash': 8772712795341, 'id': 'preferred_if_12'}}, 'replication_type': 'ReplicationTypeEnum.NONE', 'size_allocated': 2952790016, 'tenant': None, 'virus_checker': {'UnityVirusChecker': {'hash': 8772712801941, 'id': 'cava_12'}}, 'existed': True}
+2024-11-12 13:53:07,102 smbshare.py INFO : Snapshot Resource not fetched.
+2024-11-12 13:53:09,215 smbshare.py INFO : SMB Share Object: {'hash': 8772713943549, 'creation_time': '2024-11-11 08:23:59.684000+00:00', 'description': 'Sample SMB share created', 'export_paths': ['\\\\TEST_ASYNC\\s', '\\\\10.241.167.219\\s'], 'filesystem': {'UnityFileSystem': {'hash': 8772712944609}}, 'id': 'SMBShare_33', 'is_abe_enabled': True, 'is_ace_enabled': False, 'is_branch_cache_enabled': True, 'is_continuous_availability_enabled': True, 'is_dfs_enabled': False, 'is_encryption_enabled': True, 'is_read_only': None, 'modified_time': '2024-11-11 08:23:59.684000+00:00', 'name': 's', 'offline_availability': 'CifsShareOfflineAvailabilityEnum.DOCUMENTS', 'path': '/parent', 'snap': None, 'type': 'CIFSTypeEnum.CIFS_SHARE', 'umask': '777', 'existed': True}
+2024-11-12 13:53:09,216 smbshare.py INFO : Modify the details of the SMB share.
+2024-11-12 13:53:09,216 smbshare.py INFO : Checking Whether the parameters are modified or not.
+2024-11-12 13:53:09,216 smbshare.py INFO : Update Flag: False
+2024-11-12 13:53:41,546 smbshare.py INFO : Connection established with the Unity Array
+2024-11-12 13:53:45,363 smbshare.py INFO : NAS Server Object: {'hash': 8726406572361, 'allow_unmapped_user': None, 'cifs_server': {'UnityCifsServerList': [{'UnityCifsServer': {'hash': 8726406907565, 'id': 'cifs_13'}}]}, 'current_sp': {'UnityStorageProcessor': {'hash': 8726406890753, 'id': 'spb'}}, 'current_unix_directory_service': 'NasServerUnixDirectoryServiceEnum.NONE', 'default_unix_user': None, 'default_windows_user': None, 'file_dns_server': None, 'file_interface': {'UnityFileInterfaceList': [{'UnityFileInterface': {'hash': 8726406910577, 'id': 'if_45'}}]}, 'filesystems': {'UnityFileSystemList': [{'UnityFileSystem': {'hash': 8726406981789, 'id': 'fs_18'}}, {'UnityFileSystem': {'hash': 8726407192761, 'id': 'fs_20'}}, {'UnityFileSystem': {'hash': 8726406844873, 'id': 'fs_21'}}]}, 'health': {'UnityHealth': {'hash': 8726407188705}}, 'home_sp': {'UnityStorageProcessor': {'hash': 8726406858961, 'id': 'spa'}}, 'id': 'nas_12', 'is_backup_only': False, 'is_multi_protocol_enabled': False, 'is_packet_reflect_enabled': False, 'is_replication_destination': False, 'is_replication_enabled': False, 'is_windows_to_unix_username_mapping_enabled': None, 'name': 'Test_Async', 'pool': {'UnityPool': {'hash': 8726407192757, 'id': 'pool_1'}}, 'preferred_interface_settings': {'UnityPreferredInterfaceSettings': {'hash': 8726407179861, 'id': 'preferred_if_12'}}, 'replication_type': 'ReplicationTypeEnum.NONE', 'size_allocated': 2952790016, 'tenant': None, 'virus_checker': {'UnityVirusChecker': {'hash': 8726408430565, 'id': 'cava_12'}}, 'existed': True}
+2024-11-12 13:53:46,554 smbshare.py INFO : Filesystem Object: {'hash': 8726405909129, 'access_policy': 'AccessPolicyEnum.WINDOWS', 'cifs_notify_on_change_dir_depth': 512, 'cifs_share': {'UnityCifsShareList': [{'UnityCifsShare': {'hash': 8726406907633, 'id': 'SMBShare_34'}}, {'UnityCifsShare': {'hash': 8726406847377, 'id': 'SMBShare_33'}}, {'UnityCifsShare': {'hash': 8726405755281, 'id': 'SMBShare_32'}}, {'UnityCifsShare': {'hash': 8726405755289, 'id': 'SMBShare_31'}}, {'UnityCifsShare': {'hash': 8726405755293, 'id': 'SMBShare_30'}}, {'UnityCifsShare': {'hash': 8726405755301, 'id': 'SMBShare_29'}}, {'UnityCifsShare': {'hash': 8726405755265, 'id': 'SMBShare_27'}}, {'UnityCifsShare': {'hash': 8726405755269, 'id': 'SMBShare_14'}}, {'UnityCifsShare': {'hash': 8726405755273, 'id': 'SMBShare_12'}}]}, 'data_reduction_percent': 0, 'data_reduction_ratio': 1.0, 'data_reduction_size_saved': 0, 'description': '', 'folder_rename_policy': 'FSRenamePolicyEnum.SMB_RENAME_FORBIDDEN', 'format': 'FSFormatEnum.UFS64', 'health': {'UnityHealth': {'hash': 8726405909213}}, 'host_io_size': 'HostIOSizeEnum.GENERAL_8K', 'id': 'fs_18', 'is_advanced_dedup_enabled': False, 'is_cifs_notify_on_access_enabled': False, 'is_cifs_notify_on_write_enabled': False, 'is_cifs_op_locks_enabled': True, 'is_cifs_sync_writes_enabled': False, 'is_data_reduction_enabled': False, 'is_read_only': False, 'is_smbca': False, 'is_thin_enabled': True, 'locking_policy': 'FSLockingPolicyEnum.MANDATORY', 'metadata_size': 4294967296, 'metadata_size_allocated': 3758096384, 'min_size_allocated': 0, 'name': 'parent', 'nas_server': {'UnityNasServer': {'hash': 8726407121245, 'id': 'nas_12'}}, 'nfs_share': None, 'per_tier_size_used': [6442450944, 0, 0], 'pool': {'UnityPool': {'hash': 8726406982105, 'id': 'pool_1'}}, 'pool_full_policy': 'ResourcePoolFullPolicyEnum.FAIL_WRITES', 'size_allocated': 283164672, 'size_allocated_total': 4041261056, 'size_preallocated': 2401189888, 'size_total': 107374182400, 'size_used': 1622466560, 'snap_count': 0, 'snaps_size': 0, 'snaps_size_allocated': 0, 'storage_resource': {'UnityStorageResource': {'hash': 8726406494861, 'id': 'res_26'}}, 'supported_protocols': 'FSSupportedProtocolEnum.CIFS', 'tiering_policy': 'TieringPolicyEnum.AUTOTIER_HIGH', 'type': 'FilesystemTypeEnum.FILESYSTEM', 'existed': True}
+2024-11-12 13:53:46,554 smbshare.py INFO : Snapshot Resource not fetched.
+2024-11-12 13:53:47,375 smbshare.py ERROR : Failed to get details of SMB Share sarah_test with error UnityCifsShare:sarah_test not found. 
+2024-11-12 13:53:50,214 smbshare.py INFO : Modify the details of the SMB share.
+2024-11-12 13:53:50,214 smbshare.py INFO : Checking Whether the parameters are modified or not.
+2024-11-12 13:53:50,215 smbshare.py INFO : Update Flag: False
+2024-11-12 15:46:33,959 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-12 15:46:33,959 info.py INFO : Getting array details 
+2024-11-12 15:46:37,031 info.py INFO : Getting SMB shares list
+2024-11-12 15:46:38,370 info.py INFO : Successfully listed.
+2024-11-12 15:51:37,226 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-12 15:51:37,227 info.py INFO : Getting array details 
+2024-11-12 15:51:39,924 info.py INFO : Getting SMB shares list
+2024-11-12 15:51:41,228 info.py INFO : Successfully listed.
+2024-11-12 15:55:03,738 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-12 15:55:03,738 info.py INFO : Getting array details 
+2024-11-12 15:55:06,560 info.py INFO : Getting SMB shares list
+2024-11-12 15:55:08,015 info.py INFO : Successfully listed.
+2024-11-12 15:56:46,504 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-12 15:56:46,504 info.py INFO : Getting array details 
+2024-11-12 15:56:49,338 info.py INFO : Getting SMB shares list
+2024-11-12 15:56:50,657 info.py INFO : Successfully listed.
+2024-11-12 15:57:11,024 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-12 15:57:11,024 info.py INFO : Getting array details 
+2024-11-12 15:57:13,720 info.py INFO : Getting SMB shares list
+2024-11-12 15:57:15,027 info.py INFO : Successfully listed.
+2024-11-12 16:00:58,139 info.py INFO : Got the unity instance for provisioning on Unity
+2024-11-12 16:00:58,140 info.py INFO : Getting array details 
+2024-11-12 16:01:00,994 info.py INFO : Getting SMB shares list
+2024-11-12 16:01:02,182 info.py INFO : Successfully listed.

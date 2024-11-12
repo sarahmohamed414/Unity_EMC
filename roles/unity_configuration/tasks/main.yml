@@ -1,7 +1,0 @@
----
-- name: Get detailed list of Unity entities
-  ansible.builtin.import_tasks: get_unity_entities.yml
-#- name: Get Details Of NAS_Server
-#  ansible.builtin.import_tasks: get_details_nas_server
- #- name: Create SMB Share
-   #ansible.builtin.import_tasks: create_SMB_share

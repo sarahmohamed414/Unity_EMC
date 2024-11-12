@@ -1,0 +1,19 @@
+---
+- name: Create SMB share for a filesystem
+  dellemc.unity.smbshare:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    share_name: "{{ SMB_share_name }}"
+    filesystem_name: "parent"
+    nas_server_name: "Test_Async"
+    path: "parent"
+    description: "Sample SMB share created"
+    is_abe_enabled: True
+    is_branch_cache_enabled: True
+    offline_availability: "DOCUMENTS"
+    is_continuous_availability_enabled: True
+    is_encryption_enabled: True
+    umask: "777"
+    state: "present"
