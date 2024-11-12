@@ -1,0 +1,32 @@
+- name: Get list of File Systems on Unity array
+  dellemc.unity.info:
+    unispherehost: "{{unispherehost}}"
+    username: "{{username}}"
+    password: "{{password}}"
+    validate_certs: "{{validate_certs}}"
+    gather_subset:
+      - file_system
+  register: all_filesystems # Register the result for all filesystems
+- name: Initialize an empty list
+  ansible.legacy.set_fact:
+    filesystems_ids: []
+- name: Append each FS's id to the list
+  ansible.legacy.set_fact:
+    filesystems_ids: "{{ filesystems_ids + [item.id] }}"
+  loop: "{{ all_filesystems.File_Systems }}"
+  no_log: true
+- name: Display the collected FileSystems IDs
+  ansible.legacy.debug:
+    var: filesystems_ids
+- name: Initialize an empty list for Filesystem names
+  ansible.legacy.set_fact:
+    filesystem_names: []
+- name: Append each filesystem's name to the list
+  ansible.legacy.set_fact:
+    filesystem_names: "{{ filesystem_names + [item.name] }}"
+  loop: "{{ all_filesystems.File_Systems }}"
+  no_log: true
+
+- name: Display the collected filesystem names
+  ansible.legacy.debug:
+    var: filesystem_names

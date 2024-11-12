@@ -1,2 +1,7 @@
 ---
-# tasks file for unity_FileSystem_management
+- name:  Get list of File Systems on Unity array
+  ansible.builtin.import_tasks: get_filesystem_list.yml
+  when: user_input == "1"
+- name: Create a FileSystem
+  ansible.builtin.import_tasks: create_filesystem.yml
+  when: user_input == "2"

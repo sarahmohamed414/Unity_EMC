@@ -15,27 +15,12 @@
         3. Rename a FileSystem
         4. Delete a FileSystem
       private: false
-    - name: "vol_name"
-      prompt: "Enter the volume name that you want to create"
+    - name: "FS_name"
+      prompt: "Enter the Filesystem name that you want to create"
       private: false
-    - name: "vol_name_del"
-      prompt: "Enter the volume name that you want to delete"
-      private: false
-    - name: "vol_name_to_modify"
-      prompt: "Enter the volume name that you want to rename"
-      private: false
-    - name: "new_vol_name"
-      prompt: "Enter the new volume name"
-      private: false
-    - name: "SMB_share_name"
-      prompt: "Enter the SMB share that you want to create"
-      private: false
-    - name: "Get_info_SMB"
-      prompt: "Enter the SMB share that you want to get information about"
-      private: false
-    - name: "Get_info_SMB_Nas"
-      prompt: "Enter the Nas server that the share resides on"
-      private: false
+    - name: "Nas_name"
+      prompt: "Enter the NAS server name for the new filesystem"
+
 
   tasks:
     - name: Include unity_configuration role

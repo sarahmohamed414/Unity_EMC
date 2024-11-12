@@ -1,0 +1,11 @@
+- name: Create FileSystem
+  dellemc.unity.filesystem:
+    unispherehost: "{{unispherehost}}"
+    username: "{{username}}"
+    password: "{{password}}"
+    validate_certs: "{{validate_certs}}"
+    filesystem_name: "{{FS_name}}"
+    nas_server_name: "{{Nas_name}}"
+    pool_name: "Pool0"
+    size: 5
+    state: "present"
