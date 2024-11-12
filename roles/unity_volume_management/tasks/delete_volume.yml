@@ -1,4 +1,4 @@
-- name: Delete Volume by vol name
+- name: Delete Volume by volume name
   dellemc.unity.volume:
     unispherehost: "{{ unispherehost }}"
     username: "{{ username }}"
@@ -6,3 +6,17 @@
     validate_certs: "{{ validate_certs }}"
     vol_name: "{{ vol_name_del }}"
     state: absent
+  register: delete_volume_result
+
+- name: Set message based on volume deletion result
+  ansible.legacy.set_fact:
+    volume_status_message: >
+      {% if delete_volume_result.changed %}
+        The volume '{{ vol_name_del }}' has been deleted successfully.
+      {% else %}
+        The volume '{{ vol_name_del }}' does not exist and cannot be deleted.
+      {% endif %}
+
+- name: Display volume status message
+  ansible.builtin.debug:
+    msg: "{{ volume_status_message }}"
