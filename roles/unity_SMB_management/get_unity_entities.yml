@@ -25,7 +25,3 @@
       - ethernet_port
       - file_interface
   register: unity_info
-
-#- name: Print Unity information
- # ansible.builtin.debug:
-  #  var: unity_info

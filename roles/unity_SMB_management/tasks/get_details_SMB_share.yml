@@ -10,5 +10,5 @@
   register: smb_share_details
 
 - name: Print SMB Share details
-  debug:
+  ansible.builtin.debug:
     var: smb_share_details

@@ -10,10 +10,10 @@
     nas_server_name: "Test_Async"
     path: "parent"
     description: "Sample SMB share created"
-    is_abe_enabled: True
-    is_branch_cache_enabled: True
+    is_abe_enabled: true
+    is_branch_cache_enabled: true
     offline_availability: "DOCUMENTS"
-    is_continuous_availability_enabled: True
-    is_encryption_enabled: True
+    is_continuous_availability_enabled: true
+    is_encryption_enabled: true
     umask: "777"
     state: "present"
