@@ -1,10 +1,48 @@
----
-- name: Modify Volume attributes
+- name: Check if the volume exists
   dellemc.unity.volume:
-    unispherehost: "{{unispherehost}}"
-    username: "{{username}}"
-    password: "{{password}}"
-    validate_certs: "{{validate_certs}}"
-    vol_name: "{{vol_name_to_modify}}"
-    new_vol_name: "{{new_vol_name}}"
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    vol_name: "{{ vol_name_to_modify }}"
     state: present
+  register: volume_check_result
+  ignore_errors: true
+
+- name: Handle if volume does not exist
+  ansible.builtin.debug:
+    msg: "The volume '{{ vol_name_to_modify }}' does not exist and cannot be renamed."
+  when: volume_check_result.failed
+
+- name: Check if the new volume name already exists
+  dellemc.unity.volume:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    vol_name: "{{ new_vol_name }}"
+    state: present
+  register: new_volume_check_result
+  ignore_errors: true
+
+- name: Handle if new volume name already exists
+  ansible.builtin.debug:
+    msg: "The volume name '{{ new_vol_name }}' already exists and cannot be used for renaming."
+  when: not new_volume_check_result.failed
+
+- name: Modify Volume attributes if it exists and the new name is available
+  dellemc.unity.volume:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    vol_name: "{{ vol_name_to_modify }}"
+    new_vol_name: "{{ new_vol_name }}"
+    state: present
+  when: not volume_check_result.failed and new_volume_check_result.failed
+  register: modify_volume_output
+
+- name: Print old and new volume names if the volume is renamed
+  ansible.builtin.debug:
+    msg: "The volume '{{ vol_name_to_modify }}' has been renamed to '{{ new_vol_name }}'."
+  when: modify_volume_output is defined and modify_volume_output.changed
