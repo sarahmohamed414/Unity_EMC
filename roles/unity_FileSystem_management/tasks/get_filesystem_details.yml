@@ -1,0 +1,13 @@
+- name: Get details of FileSystem using id
+  dellemc.unity.filesystem:
+    unispherehost: "{{ unispherehost }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    validate_certs: "{{ validate_certs }}"
+    filesystem_id: "{{ FS_id }}"
+    state: "present"
+  register: fs_details
+
+- name: Display filesystem details
+  ansible.builtin.debug:
+    msg: "Here's the details of the FS: {{ fs_details }}"

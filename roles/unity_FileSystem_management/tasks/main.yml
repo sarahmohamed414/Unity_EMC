@@ -1,7 +1,16 @@
 ---
-- name:  Get list of File Systems on Unity array
+- name: Get list of File Systems on Unity array
   ansible.builtin.import_tasks: get_filesystem_list.yml
   when: user_input == "1"
+- name: Get details of FileSystem using id
+  ansible.builtin.import_tasks: get_filesystem_details.yml
+  when: user_input == "2"
 - name: Create a FileSystem
   ansible.builtin.import_tasks: create_filesystem.yml
-  when: user_input == "2"
+  when: user_input == "3"
+- name: Expand FileSystem size
+  ansible.builtin.import_tasks: expand_filesystem_size.yml
+  when: user_input == "4"
+- name: Delete a FileSystem
+  ansible.builtin.import_tasks: delete_filesystem.yml
+  when: user_input == "5"

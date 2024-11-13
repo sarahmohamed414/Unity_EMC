@@ -11,15 +11,28 @@
       prompt: |
         Please select an action:
         1. Get list of FileSystems names and ids
-        2. Create a FileSystem
-        3. Rename a FileSystem
-        4. Delete a FileSystem
+        2. Get details of FileSystem using id
+        3. Create a FileSystem
+        4. Expand FileSystem size
+        5. Delete a FileSystem
+      private: false
+    - name: "FS_id"
+      prompt: "Enter the Filesystem ID that you want to get details about"
       private: false
     - name: "FS_name"
       prompt: "Enter the Filesystem name that you want to create"
       private: false
     - name: "Nas_name"
-      prompt: "Enter the NAS server name for the new filesystem"
+      prompt: "Enter the NAS server name for the new filesystem that you want to create"
+    - name: "FS_expand"
+      prompt: "Enter the Filesystem Name that you want to expand"
+      private: false
+    - name: "Nas_expand"
+      prompt: "Enter the Nas server that the FS that you want to expand resides on"
+      private: false
+    - name: "FS_id_del"
+      prompt: "Enter the Filesystem ID that you want to delete"
+      private: false
 
 
   tasks:
